@@ -17,8 +17,8 @@ import HeroContent from "./HeroContent";
 
 const Hero = () => {
   return (
-    <div className=" transition-all  min-h-[93dvh] flex flex-col justify-center items-start w-10/12 mx-auto">
-      <div className="flex justify-center my-auto items-center">
+    <div className=" transition-all  min-h-[100dvh]  flex flex-col  justify-center items-start w-10/12 mx-auto">
+      <div className="flex justify-center my-auto items-center z-20">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}

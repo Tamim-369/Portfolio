@@ -71,3 +71,11 @@
   font-weight: 900;
   font-style: italic;
 }
+
+.shadow-all {
+  box-shadow: 0 0 5px rgba(44, 195, 255, 0.727);
+}
+
+.icon-shadow-all:hover {
+  box-shadow: 0 0 5px rgb(44, 195, 255);
+}
