@@ -115,27 +115,27 @@ const Contact = ({ activeLink, setActiveLink }) => {
           <input
             type="text"
             placeholder="Name"
-            className="w-full rounded-xl py-3 px-4 bg-[#152331] border-2 border-[#4087d3]  text-white text-sm focus:outline-none"
+            className="w-full rounded-xl py-3 px-4 bg-[#152331] border-2 border-sky-500  text-white text-sm focus:outline-none"
           />
           <input
             type="email"
             placeholder="Email"
-            className="w-full rounded-xl py-3 px-4 bg-[#152331] border-2 border-[#4087d3]  text-white text-sm focus:outline-none"
+            className="w-full rounded-xl py-3 px-4 bg-[#152331] border-2 border-sky-500  text-white text-sm focus:outline-none"
           />
           <input
             type="text"
             placeholder="Subject"
-            className="w-full rounded-xl py-3 px-4 bg-[#152331] border-2 border-[#4087d3]  text-white text-sm focus:outline-none"
+            className="w-full rounded-xl py-3 px-4 bg-[#152331] border-2 border-sky-500  text-white text-sm focus:outline-none"
           />
           <textarea
             placeholder="Message"
             rows={6}
-            className="w-full rounded-xl py-3 px-4 bg-[#152331] border-2 border-[#4087d3]  text-white text-sm focus:outline-none"
+            className="w-full rounded-xl py-3 px-4 bg-[#152331] border-2 border-sky-500  text-white text-sm focus:outline-none"
             defaultValue={""}
           />
           <button
             type="button"
-            className="text-white bg-[#007bff] flex justify-center items-center gap-1  font-medium font-sans rounded-md text-sm px-4 py-3 w-full"
+            className="text-white bg-sky-400 flex justify-center items-center gap-1  font-medium font-sans rounded-md text-sm px-4 py-3 w-full"
           >
             <span className="flex text-xl justify-center items-center">
               <FaPaperPlane />
