@@ -39,11 +39,11 @@ const Contact = ({ activeLink, setActiveLink }) => {
           variants={{
             init: {
               opacity: 0,
-              x: -30,
+              y: 100,
             },
             final: {
               opacity: 1,
-              x: 0,
+              y: 0,
             },
           }}
           initial="init"
@@ -100,11 +100,11 @@ const Contact = ({ activeLink, setActiveLink }) => {
           variants={{
             init: {
               opacity: 0,
-              x: 30,
+              y: -100,
             },
             final: {
               opacity: 1,
-              x: 0,
+              y: 0,
             },
           }}
           initial="init"
