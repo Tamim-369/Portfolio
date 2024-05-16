@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion, spring } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 
 const HeroContent = () => {
   return (
@@ -56,9 +57,17 @@ const HeroContent = () => {
         </div>
 
         <div className="btn-group flex  sm:justify-start justify-center items-center mt-5 ">
-          <button className="py-[0.65rem] border-2 border-sky-400 px-4 bg-sky-700 hover:bg-sky-600 text-gray-200  rounded-full font-semibold transition-all text-[1.13rem] ease-linear  duration-300 ">
+          <ScrollLink
+            id="projectLink"
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className={`py-[0.65rem] border-2 border-sky-400 px-4 bg-sky-700 hover:bg-sky-600 text-gray-200  rounded-full font-semibold transition-all text-[1.13rem] ease-linear  duration-300 `}
+          >
             Explore My Work
-          </button>
+          </ScrollLink>
         </div>
       </div>
     </>
