@@ -35,8 +35,8 @@ const HeroContent = () => {
       </span>
       <div className=" text-lg mt-3 text-gray-100 max-w-prose">
         <span>
-          I am a passionate web developer focused on crafting innovative
-          solutions to enhance user experiences and drive business growth.
+          I am a passionate web developer. I love building projects that solve
+          real world problems and I love to learn new technologies.
         </span>
       </div>
       <div className="flex-col ">
@@ -54,18 +54,9 @@ const HeroContent = () => {
             <FaInstagram />
           </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, x: 300 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="btn-group hidden sm:flex sm:justify-start justify-center items-center mt-5 "
-        >
-          <button className="py-[0.65rem]   px-4 bg-sky-500 shadow-all   rounded-3xl font-semibold transition-all text-[1.13rem] ease-linear text-[#131f2c] duration-300 hover:scale-105">
-            Explore My Work
-          </button>
-        </motion.div>
-        <div className="btn-group flex sm:hidden sm:justify-start justify-center items-center mt-5 ">
-          <button className="py-2 px-4 bg-sky-600  shadow-sky-600  text-gray-300 rounded-md font-semibold transition-all text-[1.13rem] ease-linear duration-300 hover:scale-105">
+
+        <div className="btn-group flex  sm:justify-start justify-center items-center mt-5 ">
+          <button className="py-[0.65rem] border-2 border-sky-400 px-4 bg-sky-700 hover:bg-sky-600 text-gray-200  rounded-full font-semibold transition-all text-[1.13rem] ease-linear  duration-300 ">
             Explore My Work
           </button>
         </div>
