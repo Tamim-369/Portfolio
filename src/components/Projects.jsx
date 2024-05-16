@@ -15,6 +15,42 @@ const Projects = ({ activeLink, setActiveLink }) => {
       setActiveLink("projects");
     }
   }, [isInView]);
+  const hitekStack = [
+    {
+      name: "React",
+      icon: <FaReact />,
+    },
+    {
+      name: "Tailwind",
+      icon: <RiTailwindCssFill />,
+    },
+    {
+      name: "Express",
+      icon: <SiExpress />,
+    },
+    {
+      name: "MongoDB",
+      icon: <SiMongodb />,
+    },
+  ];
+  const wonderfoodStack = [
+    {
+      name: "React",
+      icon: <FaReact />,
+    },
+    {
+      name: "Tailwind",
+      icon: <RiTailwindCssFill />,
+    },
+    {
+      name: "Express",
+      icon: <SiExpress />,
+    },
+    {
+      name: "MongoDB",
+      icon: <SiMongodb />,
+    },
+  ];
   return (
     <div ref={ref} className="mt-10">
       <Element name="projects">
@@ -24,10 +60,27 @@ const Projects = ({ activeLink, setActiveLink }) => {
           </span>
         </h1>
         <div className="  py-5  xl:px-10 mx-auto my-10 min-h-[50dvh] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-3 md:gap-5 xs:px-16 sm:px-5 px-5  ">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard
+            name={"HitekBD"}
+            description={
+              "HitekBD is a MERN stack ecommerce store with modern design, and it has full ecommerce functionality."
+            }
+            stack={hitekStack}
+            image={"/hitek.png"}
+            codeLink={"https://github.com/Tamim-369/HitekBD"}
+            demoLink={"https://hitekbd.onrender.com"}
+          />
+
+          <ProjectCard
+            name={"Wonderfood"}
+            image={"/wonderfood.png"}
+            description={
+              "A social media platform for sharing recipes, built with the MERN Stack. Key features include user authentication, profile pages, recipe CRUD operations, commenting, and a responsive, modern UI."
+            }
+            stack={wonderfoodStack}
+            codeLink={"https://github.com/Tamim-369/Wonder-Food"}
+            demoLink={"https://wonderfood.onrender.com"}
+          />
         </div>
       </Element>
     </div>
