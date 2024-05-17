@@ -1,5 +1,6 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -20,15 +21,34 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex justify-center items-center">
-            <p className="text-center">
+            <p className="text-center flex justify-center items-center gap-4">
               <a
-                href="https://github.com/tamim-369"
+                href="https://github.com/Tamim-369"
                 target="_blank"
                 className="text-2xl"
-                rel="noreferrer"
               >
-                {" "}
                 <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/tamim-ahmed369/"
+                target="_blank"
+                className="text-2xl"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61553982567839"
+                target="_blank"
+                className="text-2xl"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://twitter.com/T369Tamim"
+                target="_blank"
+                className="text-2xl"
+              >
+                <FaXTwitter />
               </a>
             </p>
           </div>
