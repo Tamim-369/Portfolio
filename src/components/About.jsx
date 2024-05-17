@@ -90,7 +90,9 @@ const About = ({ activeLink, setActiveLink }) => {
               many projects that solves real world problem. You will find more
               information about me in my resume.
             </motion.p>
-            <motion.p
+            <motion.a
+              href="https://drive.google.com/file/d/1jMe1Rtqk4Exka6bcXfkuGrvDX7_6VDPw/view?usp=sharing"
+              target="_blank"
               variants={{
                 init: { opacity: 0, x: -100 },
                 final: { opacity: 1, x: 0 },
@@ -104,7 +106,7 @@ const About = ({ activeLink, setActiveLink }) => {
               <div className="text-lg mt-1">
                 <FaArrowRightLong />
               </div>
-            </motion.p>
+            </motion.a>
             <div>
               <h1 className="text-[1.3rem] font-semibold  mt-4  mb-5">
                 <span className="border-b-[3px] border-sky-400 px-1 md:pr-3">
