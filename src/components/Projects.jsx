@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { Element } from "react-scroll";
 import "../App.css";
 import { FaGithub, FaReact } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import ProjectCard from "./ProjectCard";
 const Projects = ({ activeLink, setActiveLink }) => {
@@ -51,6 +51,20 @@ const Projects = ({ activeLink, setActiveLink }) => {
       icon: <SiMongodb />,
     },
   ];
+  const quoterStack = [
+    {
+      name: "Next",
+      icon: <RiNextjsFill />,
+    },
+    {
+      name: "Tailwind",
+      icon: <RiTailwindCssFill />,
+    },
+    {
+      name: "MongoDB",
+      icon: <SiMongodb />,
+    },
+  ];
   return (
     <div ref={ref} className="mt-10">
       <Element name="projects">
@@ -70,7 +84,16 @@ const Projects = ({ activeLink, setActiveLink }) => {
             codeLink={"https://github.com/Tamim-369/HitekBD"}
             demoLink={"https://hitekbd.onrender.com"}
           />
-
+          <ProjectCard
+            name={"Quoter"}
+            image={"/quoter2.png"}
+            description={
+              "A social media platform for sharing motivational Quotes, built with the NEXT JS. Key features include user authentication, profile pages, Quote CRUD operations and a responsive, modern UI."
+            }
+            stack={quoterStack}
+            codeLink={"https://github.com/Tamim-369/Quoter/"}
+            demoLink={"https://quoter-omega-ten.vercel.app/"}
+          />
           <ProjectCard
             name={"Wonderfood"}
             image={"/wonderfood.png"}
