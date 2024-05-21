@@ -96,7 +96,7 @@ const About = ({ activeLink, setActiveLink }) => {
               information about me in my resume.
             </motion.p>
             <motion.a
-              href="https://drive.google.com/file/d/1jMe1Rtqk4Exka6bcXfkuGrvDX7_6VDPw/view?usp=sharing"
+              href="https://drive.google.com/file/d/1NMWn4N_Jk6N3xlwdFY_BpKnnUON5hW97/view?usp=sharing"
               target="_blank"
               variants={{
                 init: { opacity: 0, x: -100 },
