@@ -15,7 +15,12 @@ import {
   FaReact,
 } from "react-icons/fa";
 import { FaJs } from "react-icons/fa6";
-import { RiNodejsFill, RiNodejsLine, RiTailwindCssFill } from "react-icons/ri";
+import {
+  RiNextjsFill,
+  RiNodejsFill,
+  RiNodejsLine,
+  RiTailwindCssFill,
+} from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -202,8 +207,8 @@ const About = ({ activeLink, setActiveLink }) => {
                   transition={{ duration: 0.7 }}
                   className="icon text-4xl flex justify-center items-center  flex-col font-semibold"
                 >
-                  <FaNpm />
-                  <p className="text-sm text-center"> NPM</p>
+                  <RiNextjsFill />
+                  <p className="text-sm text-center"> Next JS</p>
                 </motion.div>
                 <motion.div
                   variants={{
