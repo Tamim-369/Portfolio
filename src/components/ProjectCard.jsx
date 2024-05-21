@@ -43,10 +43,10 @@ const ProjectCard = ({
         ref={ref}
         className="project  sm:my-0 my-2 flex bg-[#203548] border-2 border-[#406686] shadow-md  shadow-[#406686]   flex-col rounded-2xl justify-center items-center "
       >
-        <div className="w-full group p-2 relative overflow-hidden top-0 bottom-0 right-0 left-0  ">
+        <div className="w-full group  relative overflow-hidden top-0 bottom-0 right-0 left-0  ">
           <img
             src={image}
-            className="h-full w-full  object-contain  rounded-xl object-center filter "
+            className="h-full w-full  object-contain  rounded-t-2xl border-b-[#406686] border-b-2 object-center filter "
             alt=""
             srcset=""
           />
