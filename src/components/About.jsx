@@ -25,6 +25,7 @@ import { SiExpress, SiMongodb } from "react-icons/si";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Element } from "react-scroll";
+import { Link } from "react-router-dom";
 const About = ({ activeLink, setActiveLink }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.1, once: false });
@@ -95,9 +96,7 @@ const About = ({ activeLink, setActiveLink }) => {
               many projects that solves real world problem. You will find more
               information about me in my resume.
             </motion.p>
-            <motion.a
-              href="https://drive.google.com/file/d/1NMWn4N_Jk6N3xlwdFY_BpKnnUON5hW97/view?usp=sharing"
-              target="_blank"
+            <motion.div
               variants={{
                 init: { opacity: 0, x: -100 },
                 final: { opacity: 1, x: 0 },
@@ -105,13 +104,17 @@ const About = ({ activeLink, setActiveLink }) => {
               initial="init"
               animate={mainControls}
               transition={{ duration: 0.7 }}
-              className="flex text-lg border-b-[2px] border-sky-50   transition-all ease-linear duration-200 hover:text-sky-400 hover:border-sky-400  w-[11rem] justify-start font-semibold mt-3 cursor-pointer mb-10 items-center gap-3"
             >
-              <div className="">View my resume</div>
-              <div className="text-lg mt-1">
-                <FaArrowRightLong />
-              </div>
-            </motion.a>
+              <Link
+                to="/resume"
+                className="flex text-lg border-b-[2px] border-sky-50   transition-all ease-linear duration-200 hover:text-sky-400 hover:border-sky-400  w-[11rem] justify-start font-semibold mt-3 cursor-pointer mb-10 items-center gap-3"
+              >
+                <div className="">View my resume</div>
+                <div className="text-lg mt-1">
+                  <FaArrowRightLong />
+                </div>
+              </Link>
+            </motion.div>
             <div>
               <h1 className="text-[1.3rem] font-semibold  mt-4  mb-5">
                 <span className="border-b-[3px] border-sky-400 px-1 md:pr-3">
