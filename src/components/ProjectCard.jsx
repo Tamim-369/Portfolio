@@ -97,7 +97,7 @@ const ProjectCard = ({
           <span className="sm:text-xl font-medium font-sans">
             {description}
           </span>
-          <div className=" sm:flex hidden lg:mt-4 justify-center text-center gap-2 flex-wrap">
+          <div className=" sm:flex hidden lg:mt-4 justify-center text-center gap-2 flex-wrap mb-5 lg:mb-0">
             {stack.map((item) => (
               <div
                 key={item}
@@ -108,7 +108,7 @@ const ProjectCard = ({
               </div>
             ))}
           </div>
-          <div className="btn-group sm:mt-0 mt-5 lg:pt-5 flex justify-start sm:justify-center items-center gap-2">
+          <div className="btn-group sm:mt-0 mt-5  lg:pt-5 flex justify-start sm:justify-center items-center gap-2">
             <a
               href={codeLink}
               target="_blank"

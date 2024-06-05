@@ -97,7 +97,7 @@ const Projects = ({ activeLink, setActiveLink }) => {
             My Projects
           </span>
         </h1>
-        <div className="  py-5  xl:px-10 mx-auto my-10 text-center min-h-[50dvh] flex flex-col justify-center items-center  gap-10 sm:gap-3 md:gap-5   ">
+        <div className="  py-5  xl:px-10 mx-auto my-10 text-center min-h-[50dvh] flex flex-col justify-center items-center   sm:gap-3 md:gap-5   ">
           <ProjectCard
             name={"HitekBD"}
             description={
