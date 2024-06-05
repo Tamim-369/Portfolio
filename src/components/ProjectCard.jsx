@@ -1,6 +1,6 @@
 import { useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
-import { FaGithub, FaReact } from "react-icons/fa";
+import { FaEye, FaGithub, FaLink, FaReact } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
@@ -41,12 +41,12 @@ const ProjectCard = ({
         animate={mainControls}
         transition={{ duration: 0.7 }}
         ref={ref}
-        className="project  sm:my-0 my-2 flex bg-[#203548] border-2 border-[#406686] shadow-md  shadow-[#406686]   flex-col rounded-2xl justify-center items-center "
+        className="flex flex-col w-11/12 sm:mb-10 lg:mb-0 lg:px-10 relative md:w-8/12 lg:w-full lg:flex-row lg:even:flex-row-reverse justify-center items-center gap-4 "
       >
-        <div className="w-full group  relative overflow-hidden top-0 bottom-0 right-0 left-0  ">
+        {/* <div className="w-full group  relative  overflow-hidden top-0 bottom-0 right-0 left-0  ">
           <img
             src={image}
-            className="h-full w-full  object-contain  rounded-t-2xl border-b-[#406686] border-b-2 object-center filter "
+            className="h-full w-full  object-contain  rounded-t-2xl  object-center filter "
             alt=""
             srcset=""
           />
@@ -54,7 +54,7 @@ const ProjectCard = ({
             <a
               href={codeLink}
               target="_blank"
-              className="hover:scale-110 transition-all ease-linear shadow-sm shadow-black duration-100 p-[0.6rem] bg-[#203548] rounded-full  flex  justify-center items-center gap-2 text-white"
+              className="hover:scale-110 transition-all ease-linear shadow-sm shadow-black bg-[#203548] duration-100 p-[0.6rem]  rounded-full  flex  justify-center items-center gap-2 text-white"
             >
               <div className="text-xl ">
                 <FaCode />
@@ -81,21 +81,60 @@ const ProjectCard = ({
               </div>
             </a>
           </div>
+        </div> */}
+        <div className="lg:flex-1">
+          <img
+            src={image}
+            className=" sm:flex hidden object-cover sm:object-scale-down filter    rounded-xl"
+            alt=""
+          />
         </div>
-        <div className="  mx-auto transition-all ease-linear duration-150 my-auto  flex justify-center items-center flex-col  pb-7 rounded-b-2xl text-white text-center ">
-          <h1 className="text-xl mb-2 mt-4 font-bold">{name}</h1>
-          <p className=" text-base px-3  font-medium poppins text-gray-200">
-            {description}
-          </p>
 
-          <span className="lg:mt-5 flex-wrap  w-11/12 mt-2 flex gap-2 justify-center items-center">
-            {stack.map((item, index) => (
-              <span className="flex justify-center items-center gap-1">
-                <div className="text-xl ">{item.icon}</div>
-                <div className="text-sm ">{item.name}</div>
-              </span>
-            ))}
+        <div className="lg:flex-1 lg:relative sm:absolute lg:bg-none lg:border-none bg-gradient-to-t sm:from-[#0e324b] to-[#0e324bb4] border-sky-600 border-b sm:border backdrop-blur-[10px] h-full w-full sm:rounded-xl  sm:text-center text-left flex flex-col justify-center text-white p-4 sm:p-10">
+          <span className=" text-xl sm:text-3xl font-semibold font-sans">
+            {name}
           </span>
+          <span className="sm:text-xl font-medium font-sans">
+            {description}
+          </span>
+          <div className=" sm:flex hidden lg:mt-4 justify-center text-center gap-2 flex-wrap">
+            {stack.map((item) => (
+              <div
+                key={item}
+                className="flex justify-center items-center gap-2  px-3 rounded-full text-white"
+              >
+                <div className="text-xl text-center">{item.icon}</div>
+                <div>{item.name}</div>
+              </div>
+            ))}
+          </div>
+          <div className="btn-group sm:mt-0 mt-5 lg:pt-5 flex justify-start sm:justify-center items-center gap-2">
+            <a
+              href={codeLink}
+              target="_blank"
+              className="flex gap-2 justify-center items-center border border-sky-600 py-2 px-2 sm:px-3 bg-sky-700 text-white rounded-full"
+            >
+              <div className="text-xl sm:text-2xl">
+                <FaCode />
+              </div>
+              <div className="text-sm font-semibold  hidden sm:flex ">
+                {" "}
+                Source Code
+              </div>
+            </a>
+            <a
+              href={demoLink}
+              target="_blank"
+              className="flex gap-2 justify-center items-center border border-sky-600 py-2 px-2 sm:px-3 bg-sky-700 text-white rounded-full"
+            >
+              <div className="text-xl sm:text-2xl">
+                <FaLink />
+              </div>
+              <div className="text-sm font-semibold  hidden sm:flex ">
+                Live Preview
+              </div>
+            </a>
+          </div>
         </div>
       </motion.div>
     </>

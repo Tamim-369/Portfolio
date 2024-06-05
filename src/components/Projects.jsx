@@ -3,8 +3,14 @@ import React, { useEffect, useRef } from "react";
 import { Element } from "react-scroll";
 import "../App.css";
 import { FaGithub, FaReact } from "react-icons/fa";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiMongodb } from "react-icons/si";
+import { RiNextjsFill, RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
+import {
+  SiExpress,
+  SiFramer,
+  SiMongodb,
+  SiNextdotjs,
+  SiTypescript,
+} from "react-icons/si";
 import ProjectCard from "./ProjectCard";
 const Projects = ({ activeLink, setActiveLink }) => {
   const ref = useRef(null);
@@ -65,6 +71,24 @@ const Projects = ({ activeLink, setActiveLink }) => {
       icon: <SiMongodb />,
     },
   ];
+  const KalestheticsStack = [
+    {
+      name: "Next",
+      icon: <SiNextdotjs />,
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript className="text-lg" />,
+    },
+    {
+      name: "Tailwind",
+      icon: <RiTailwindCssFill />,
+    },
+    {
+      name: "Framer Motion",
+      icon: <SiFramer />,
+    },
+  ];
   return (
     <div ref={ref} className="mt-10">
       <Element name="projects">
@@ -73,7 +97,7 @@ const Projects = ({ activeLink, setActiveLink }) => {
             My Projects
           </span>
         </h1>
-        <div className="  py-5  xl:px-10 mx-auto my-10 min-h-[50dvh] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-3 md:gap-5 xs:px-16 sm:px-5 px-5  ">
+        <div className="  py-5  xl:px-10 mx-auto my-10 text-center min-h-[50dvh] flex flex-col justify-center items-center  gap-10 sm:gap-3 md:gap-5   ">
           <ProjectCard
             name={"HitekBD"}
             description={
@@ -84,6 +108,18 @@ const Projects = ({ activeLink, setActiveLink }) => {
             codeLink={"https://github.com/Tamim-369/HitekBD"}
             demoLink={"https://hitekbd.onrender.com"}
           />
+
+          <ProjectCard
+            name={"Kalesthetics"}
+            image={"/kalesthetics.png"}
+            description={
+              "A modern AI fitness trainer website landing page with animations and beautiful UI design."
+            }
+            stack={KalestheticsStack}
+            codeLink={"https://github.com/Tamim-369/kalesthetics/"}
+            demoLink={"https://kalesthetics.onrender.com/"}
+          />
+
           <ProjectCard
             name={"Quoter"}
             image={"/quoter2.png"}
@@ -94,6 +130,7 @@ const Projects = ({ activeLink, setActiveLink }) => {
             codeLink={"https://github.com/Tamim-369/Quoter/"}
             demoLink={"https://quoter-omega-ten.vercel.app/"}
           />
+
           <ProjectCard
             name={"Wonderfood"}
             image={"/wonderfood.png"}

@@ -66,10 +66,10 @@ const Contact = ({ activeLink, setActiveLink }) => {
   }, [isInView]);
 
   return (
-    <Element name="contact" className="mt-32 min-h-[70dvh]">
+    <Element name="contact" className=" mt-20 sm:mt-32 min-h-[70dvh]">
       <div
         ref={ref}
-        className="grid sm:grid-cols-2 items-center gap-16 my-6 mx-auto w-11/12 lg:w-10/12 text-white font-[sans-serif]"
+        className="sm:grid sm:grid-cols-2 items-center gap-16 my-6 mx-auto w-10/12 sm:w-11/12 lg:w-10/12 text-white font-[sans-serif]"
       >
         <motion.div
           variants={{
@@ -85,9 +85,9 @@ const Contact = ({ activeLink, setActiveLink }) => {
             Have some big idea or brand to develop and need help? Then reach
             out, I'd love to hear about your project and provide help.
           </p>
-          <div className="mt-12">
+          <div className="mt-12 sm:block hidden">
             <h2 className="text-lg font-extrabold">Email</h2>
-            <ul className="mt-3">
+            <ul className="mt-3 ">
               <li className="flex items-center">
                 <div className="bg-[#1a3c48] border border-[#224d5c] h-10 w-10 rounded-full flex items-center justify-center shrink-0 text-2xl">
                   <SiGmail />
@@ -136,7 +136,7 @@ const Contact = ({ activeLink, setActiveLink }) => {
           animate={mainControls}
           ref={form}
           transition={{ duration: 0.7 }}
-          className="ml-auto space-y-4"
+          className="sm:ml-auto sm:mt-0 mt-10 space-y-4"
         >
           <input
             type="text"
