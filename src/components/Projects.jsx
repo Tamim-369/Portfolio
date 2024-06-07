@@ -7,8 +7,10 @@ import { RiNextjsFill, RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiExpress,
   SiFramer,
+  SiGooglegemini,
   SiMongodb,
   SiNextdotjs,
+  SiReact,
   SiTypescript,
 } from "react-icons/si";
 import ProjectCard from "./ProjectCard";
@@ -89,6 +91,24 @@ const Projects = ({ activeLink, setActiveLink }) => {
       icon: <SiFramer />,
     },
   ];
+  const LinguifyStack = [
+    {
+      name: "React",
+      icon: <SiReact />,
+    },
+    {
+      name: "Express",
+      icon: <SiExpress />,
+    },
+    {
+      name: "Gemini",
+      icon: <SiGooglegemini />,
+    },
+    {
+      name: "Tailwind",
+      icon: <RiTailwindCssFill />,
+    },
+  ];
   return (
     <div ref={ref} className="mt-10">
       <Element name="projects">
@@ -98,6 +118,16 @@ const Projects = ({ activeLink, setActiveLink }) => {
           </span>
         </h1>
         <div className="  py-5  xl:px-10 mx-auto my-10 text-center min-h-[50dvh] flex flex-col justify-center items-center   sm:gap-3 md:gap-5   ">
+          <ProjectCard
+            name={"LinguifyAI"}
+            image={"/linguifyai.png"}
+            description={
+              "An ai tool powerd by Gemini API that allows users to chat with thier PDF files. It converts pdf file to text and use that text to answer user's questions."
+            }
+            stack={LinguifyStack}
+            codeLink={"https://github.com/Tamim-369/LinguifyAI"}
+            demoLink={"https://linguifyai.onrender.com"}
+          />
           <ProjectCard
             name={"HitekBD"}
             description={
@@ -119,18 +149,6 @@ const Projects = ({ activeLink, setActiveLink }) => {
             codeLink={"https://github.com/Tamim-369/kalesthetics/"}
             demoLink={"https://kalesthetics.onrender.com/"}
           />
-
-          <ProjectCard
-            name={"Quoter"}
-            image={"/quoter2.png"}
-            description={
-              "A social media platform for sharing motivational Quotes, built with the NEXT JS. Key features include user authentication, profile pages, Quote CRUD operations and a responsive, modern UI."
-            }
-            stack={quoterStack}
-            codeLink={"https://github.com/Tamim-369/Quoter/"}
-            demoLink={"https://quoter-omega-ten.vercel.app/"}
-          />
-
           <ProjectCard
             name={"Wonderfood"}
             image={"/wonderfood.png"}
@@ -140,6 +158,16 @@ const Projects = ({ activeLink, setActiveLink }) => {
             stack={wonderfoodStack}
             codeLink={"https://github.com/Tamim-369/Wonder-Food"}
             demoLink={"https://wonderfood.onrender.com"}
+          />
+          <ProjectCard
+            name={"Quoter"}
+            image={"/quoter2.png"}
+            description={
+              "A social media platform for sharing motivational Quotes, built with the NEXT JS. Key features include user authentication, profile pages, Quote CRUD operations and a responsive, modern UI."
+            }
+            stack={quoterStack}
+            codeLink={"https://github.com/Tamim-369/Quoter/"}
+            demoLink={"https://quoter-omega-ten.vercel.app/"}
           />
         </div>
       </Element>
