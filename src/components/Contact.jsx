@@ -5,35 +5,71 @@ import {
   FaGithubAlt,
   FaLinkedinIn,
   FaPaperPlane,
+  FaSpinner,
 } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { Element } from "react-scroll";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { injectStyle } from "react-toastify/dist/inject-style";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaXTwitter } from "react-icons/fa6";
+
 const Contact = ({ activeLink, setActiveLink }) => {
   const [formData, setFormData] = useState({});
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.1, once: false });
   const mainControls = useAnimation();
   const form = useRef();
-
+  const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(import.meta.env.VITE_TEMPLATE_NAME);
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE_NAME,
-        import.meta.env.VITE_SERVICE_TEMPLATE,
-        form.current,
-        { publicKey: import.meta.env.VITE_PUBLIC_KEY }
-      )
-      .then((result) => {
-        toast("Message Sent Successfully", {
+    setLoading(true);
+    fetch(`${import.meta.env.VITE_API}/api/sendmail`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.from_name,
+        from: formData.from_email,
+        message: formData.message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          setLoading(false);
+          toast("Message Sent Successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            className: "bg-[#203548] border border-[#203548] text-white",
+          });
+
+          setFormData({});
+          form.current.reset();
+        } else {
+          setLoading(false);
+          toast("Failed to send message", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            className: "bg-[#203548] border border-[#203548] text-white",
+          });
+        }
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error("Error sending email");
+        console.log(error);
+        toast("Error sending message", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -42,12 +78,6 @@ const Contact = ({ activeLink, setActiveLink }) => {
           draggable: true,
           className: "bg-[#203548] border border-[#203548] text-white",
         });
-
-        setFormData({});
-        form.current.reset();
-      })
-      .catch((error) => {
-        console.log(error);
       });
   };
 
@@ -166,15 +196,22 @@ const Contact = ({ activeLink, setActiveLink }) => {
             type="submit"
             className="text-white bg-sky-600 flex justify-center items-center gap-1 font-medium font-sans rounded-md text-sm px-4 py-3 w-full"
           >
-            <span className="flex text-xl justify-center items-center">
-              <FaPaperPlane />
-            </span>
-            <span className="flex justify-center items-center text-md">
-              Send Message
-            </span>
+            {loading ? (
+              <FaSpinner className="animate-spin text-2xl" />
+            ) : (
+              <>
+                <span className="flex text-xl justify-center items-center">
+                  <FaPaperPlane />
+                </span>
+                <span className="flex justify-center items-center text-md">
+                  Send Message
+                </span>
+              </>
+            )}
           </button>
         </motion.form>
       </div>
+      <ToastContainer />
     </Element>
   );
 };
