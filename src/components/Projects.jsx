@@ -11,6 +11,7 @@ import {
   SiMongodb,
   SiNextdotjs,
   SiReact,
+  SiShadcnui,
   SiTypescript,
 } from "react-icons/si";
 import ProjectCard from "./ProjectCard";
@@ -25,20 +26,20 @@ const Projects = ({ activeLink, setActiveLink }) => {
   }, [isInView]);
   const hitekStack = [
     {
-      name: "React",
-      icon: <FaReact />,
+      name: "Next",
+      icon: <RiNextjsFill />,
     },
     {
       name: "Tailwind",
       icon: <RiTailwindCssFill />,
     },
     {
-      name: "Express",
-      icon: <SiExpress />,
+      name: "Shadcn",
+      icon: <SiShadcnui />,
     },
     {
-      name: "MongoDB",
-      icon: <SiMongodb />,
+      name: "Typescript",
+      icon: <SiTypescript />,
     },
   ];
   const wonderfoodStack = [
@@ -131,12 +132,12 @@ const Projects = ({ activeLink, setActiveLink }) => {
           <ProjectCard
             name={"HitekBD"}
             description={
-              "HitekBD is a MERN stack ecommerce store with modern design, and it has full ecommerce functionality."
+              "HitekBD is a Next JS gadget ecommerce store frontend. It have a beautifull and modern design with best ecommerce design practices."
             }
             stack={hitekStack}
             image={"/hitek.png"}
-            codeLink={"https://github.com/Tamim-369/HitekBD"}
-            demoLink={"https://hitekbd.onrender.com"}
+            codeLink={"https://github.com/Tamim-369/Ecommerce"}
+            demoLink={"https://ecommerce-tamim-369s-projects.vercel.app"}
           />
 
           <ProjectCard
